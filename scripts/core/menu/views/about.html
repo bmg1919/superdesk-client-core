@@ -10,10 +10,10 @@
     <div class="about-content">
       <span class="sf-logo"></span>
       <h4>Superdesk {{ :: version }}</span></h4>
-      <h5 ng-if="build_rev && build_rev !== ''">Superdesk rev. <a href="https://github.com/superdesk/superdesk/tree/{{ :: build_rev }}" rel="noopener noreferrer">{{ :: build_rev }}</a></h5>
+      <h5 ng-if="build_rev && build_rev !== ''">Superdesk rev. {{ :: build_rev }}</h5>
 
       <h5 ng-repeat="module in modules track by module.name">
-        {{ module.name }}: <a ng-href="{{ module.href }}" rel="noopener noreferrer">{{ module.version }}</a>
+        {{ module.name }}: {{ module.version }}
       </h5>
 
       <p class="date-released"><span ng-show="releaseDate">Released on</span> {{ :: releaseDate }}</p>
@@ -23,14 +23,6 @@
       <p>
         Copyright (c) 2014 - {{ year }} Sourcefabric z.u. and contributors.<br>
         Superdesk is released under the <a href="https://www.gnu.org/licenses/agpl-3.0" target="_blank">open source license AGPLv3</a>.
-      </p>
-      <p>
-        Looking for help or support?<br>
-        <a href="https://forum.sourcefabric.org/categories/superdesk-dev" target="_blank">Forum</a>&nbsp;&nbsp; | &nbsp;
-        <a href="https://www.superdesk.org/attachment/13/superdeskmastermanual.pdf?g_download=1" target="_blank">User Manual</a>
-      </p>
-      <p>
-        Get in touch with us via direct email <a href="mailto:superdesk@sourcefabric.org">superdesk@sourcefabric.org</a>.
       </p>
     </div>
   </div>
